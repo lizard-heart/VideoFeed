@@ -37,7 +37,8 @@ struct ContentView: View {
                     List {
                         ForEach(channels, id:\.id) { channel in
                             Text(feedName(channel.channelID!))
-                        }
+                        }.onDelete(perform: delete)
+                        
                     }
                     
                     Spacer()
@@ -63,6 +64,14 @@ struct ContentView: View {
                     .opacity(showingAlert ? 1 : 0)
             }.background(Color(red: 0/256, green: 0/256, blue: 0/256))
         }.preferredColorScheme(.dark)
+    }
+    
+    func delete(at offsets: IndexSet) {
+        for index in offsets {
+            let channel = channels[index]
+            viewContext.delete(channel)
+            try? self.viewContext.save()
+        }
     }
 }
 
