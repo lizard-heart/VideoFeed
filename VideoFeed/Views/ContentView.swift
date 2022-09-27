@@ -10,42 +10,58 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.channelID, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
+            VStack {
+                Text("Feeds")
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .foregroundColor(Color.red)
+
+                List {
+                    Section(header: Text("Smart Feeds")) {
+                        NavigationLink {
+                            VideoFeed(channelID: "1", isPlaylist: true)
+                        } label: {
+                            Text("All Feeds").fontWeight(.bold)
+                        }
+                    }
+                    
+                    Section(header: Text("Channels")) {
+                        ForEach(items) { item in
+                            NavigationLink {
+                                VideoFeed(channelID: item.channelID!, isPlaylist: false)
+                            } label: {
+                                Text(item.name!)
+                            }
+                        }
+                        .onDelete(perform: deleteItems)
                     }
                 }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        EditButton()
+                    }
+                    ToolbarItem {
+                        NavigationLink(destination: NewChannelView()) {
+                            Label("Add Item", systemImage: "plus")
+                        }
                     }
                 }
+
             }
-            Text("Select an item")
         }
     }
 
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+            newItem.channelID = "test"
 
             do {
                 try viewContext.save()

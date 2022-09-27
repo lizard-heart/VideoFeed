@@ -7,15 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA0D68F828E26566000879E2 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D68F728E26566000879E2 /* Reader.swift */; };
+		BA0D68FA28E26620000879E2 /* VideoFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D68F928E26620000879E2 /* VideoFeed.swift */; };
+		BA0D68FE28E296DB000879E2 /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D68FD28E296DB000879E2 /* VideoPlayer.swift */; };
+		BA0D690028E297C0000879E2 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0D68FF28E297C0000879E2 /* WebViewModel.swift */; };
 		BA7204CD28E2389900D4AD35 /* VideoFeedApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204CC28E2389900D4AD35 /* VideoFeedApp.swift */; };
 		BA7204CF28E2389900D4AD35 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204CE28E2389900D4AD35 /* ContentView.swift */; };
 		BA7204D128E2389A00D4AD35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7204D028E2389A00D4AD35 /* Assets.xcassets */; };
 		BA7204D428E2389A00D4AD35 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA7204D328E2389A00D4AD35 /* Preview Assets.xcassets */; };
 		BA7204D628E2389A00D4AD35 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204D528E2389A00D4AD35 /* Persistence.swift */; };
 		BA7204D928E2389A00D4AD35 /* VideoFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BA7204D728E2389A00D4AD35 /* VideoFeed.xcdatamodeld */; };
+		BA7204E128E2396500D4AD35 /* NewChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E028E2396500D4AD35 /* NewChannelView.swift */; };
+		BA7204E328E2398800D4AD35 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E228E2398800D4AD35 /* NetworkManager.swift */; };
+		BA7204E528E239B300D4AD35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E428E239B300D4AD35 /* Constants.swift */; };
+		BA7204E728E239C900D4AD35 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E628E239C900D4AD35 /* APIKey.swift */; };
+		BA7204E928E239F900D4AD35 /* YoutubeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E828E239F900D4AD35 /* YoutubeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BA0D68F728E26566000879E2 /* Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		BA0D68F928E26620000879E2 /* VideoFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeed.swift; sourceTree = "<group>"; };
+		BA0D68FC28E28174000879E2 /* VideoFeed.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VideoFeed.entitlements; sourceTree = "<group>"; };
+		BA0D68FD28E296DB000879E2 /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		BA0D68FF28E297C0000879E2 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
 		BA7204C928E2389900D4AD35 /* VideoFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA7204CC28E2389900D4AD35 /* VideoFeedApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoFeedApp.swift; sourceTree = "<group>"; };
 		BA7204CE28E2389900D4AD35 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -24,6 +38,11 @@
 		BA7204D528E2389A00D4AD35 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		BA7204D828E2389A00D4AD35 /* VideoFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VideoFeed.xcdatamodel; sourceTree = "<group>"; };
 		BA7204DA28E2389A00D4AD35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA7204E028E2396500D4AD35 /* NewChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChannelView.swift; sourceTree = "<group>"; };
+		BA7204E228E2398800D4AD35 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BA7204E428E239B300D4AD35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BA7204E628E239C900D4AD35 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		BA7204E828E239F900D4AD35 /* YoutubeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +56,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA0D68FB28E27345000879E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BA7204CE28E2389900D4AD35 /* ContentView.swift */,
+				BA7204E028E2396500D4AD35 /* NewChannelView.swift */,
+				BA0D68F928E26620000879E2 /* VideoFeed.swift */,
+				BA0D68FD28E296DB000879E2 /* VideoPlayer.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BA7204C028E2389900D4AD35 = {
 			isa = PBXGroup;
 			children = (
@@ -56,10 +86,17 @@
 		BA7204CB28E2389900D4AD35 /* VideoFeed */ = {
 			isa = PBXGroup;
 			children = (
+				BA0D68FC28E28174000879E2 /* VideoFeed.entitlements */,
+				BA0D68FB28E27345000879E2 /* Views */,
 				BA7204CC28E2389900D4AD35 /* VideoFeedApp.swift */,
-				BA7204CE28E2389900D4AD35 /* ContentView.swift */,
-				BA7204D028E2389A00D4AD35 /* Assets.xcassets */,
+				BA0D68FF28E297C0000879E2 /* WebViewModel.swift */,
+				BA0D68F728E26566000879E2 /* Reader.swift */,
+				BA7204E828E239F900D4AD35 /* YoutubeModel.swift */,
+				BA7204E428E239B300D4AD35 /* Constants.swift */,
+				BA7204E628E239C900D4AD35 /* APIKey.swift */,
+				BA7204E228E2398800D4AD35 /* NetworkManager.swift */,
 				BA7204D528E2389A00D4AD35 /* Persistence.swift */,
+				BA7204D028E2389A00D4AD35 /* Assets.xcassets */,
 				BA7204DA28E2389A00D4AD35 /* Info.plist */,
 				BA7204D728E2389A00D4AD35 /* VideoFeed.xcdatamodeld */,
 				BA7204D228E2389A00D4AD35 /* Preview Content */,
@@ -145,10 +182,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA0D690028E297C0000879E2 /* WebViewModel.swift in Sources */,
+				BA7204E328E2398800D4AD35 /* NetworkManager.swift in Sources */,
 				BA7204D628E2389A00D4AD35 /* Persistence.swift in Sources */,
+				BA0D68F828E26566000879E2 /* Reader.swift in Sources */,
+				BA7204E728E239C900D4AD35 /* APIKey.swift in Sources */,
+				BA7204E928E239F900D4AD35 /* YoutubeModel.swift in Sources */,
 				BA7204D928E2389A00D4AD35 /* VideoFeed.xcdatamodeld in Sources */,
 				BA7204CF28E2389900D4AD35 /* ContentView.swift in Sources */,
+				BA7204E528E239B300D4AD35 /* Constants.swift in Sources */,
+				BA0D68FE28E296DB000879E2 /* VideoPlayer.swift in Sources */,
+				BA0D68FA28E26620000879E2 /* VideoFeed.swift in Sources */,
 				BA7204CD28E2389900D4AD35 /* VideoFeedApp.swift in Sources */,
+				BA7204E128E2396500D4AD35 /* NewChannelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +320,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoFeed/VideoFeed.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoFeed/Preview Content\"";
@@ -292,6 +340,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = henry.VideoFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -303,6 +354,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VideoFeed/VideoFeed.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VideoFeed/Preview Content\"";
@@ -321,6 +374,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = henry.VideoFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
