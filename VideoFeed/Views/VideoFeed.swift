@@ -29,7 +29,7 @@ struct VideoFeed: View {
             ForEach(generateVideoList(isPlaylist: isPlaylist, ID: channelID, watchedVideos: watchedVideos, subscribedFeeds: subscribedFeeds)) { video in
                 VStack(alignment: .leading) {
                     NavigationLink {
-                        VideoPlayer(videoID: video.id)
+                        VideoPlayer(videoID: video.id, videoTitle: video.videoTitle, videoDescription: video.description)
                     } label: {
                         Text(video.videoTitle)
                     }
@@ -51,6 +51,7 @@ struct Video: Identifiable {
     let videoTitle: String
     var author: String
     var published: String
+    var description: String
 }
 
 func loadRss(_ data: URL) -> [Video] {
@@ -58,6 +59,7 @@ func loadRss(_ data: URL) -> [Video] {
     let videoTitles = reader.feeds.mutableArrayValue(forKey: "media:title")
     let videoIDs = reader.feeds.mutableArrayValue(forKey: "yt:videoId")
     let publishDates = reader.feeds.mutableArrayValue(forKey: "published")
+    let descriptions = reader.feeds.mutableArrayValue(forKey: "media:description")
     var videoAuthors = ""
     
     do {
@@ -71,12 +73,13 @@ func loadRss(_ data: URL) -> [Video] {
     for i in videoTitles {
         let intIndex = videoTitles.index(of: i)
         var videoTitleString = videoTitles[intIndex] as! String
+        let description = descriptions[intIndex] as! String
         let publishDate = publishDates[intIndex] as! String
 //        var videoAuthorString = videoAuthors[intIndex] as! String
         if videoTitleString.contains("\n") {
             videoTitleString = videoTitleString.components(separatedBy: "\n")[0]
         }
-        videosToReturn.append(Video(id: (videoIDs[intIndex] as! String).components(separatedBy: "\n")[0], videoTitle: videoTitleString, author: videoAuthors, published: publishDate))
+        videosToReturn.append(Video(id: (videoIDs[intIndex] as! String).components(separatedBy: "\n")[0], videoTitle: videoTitleString, author: videoAuthors, published: publishDate, description: description))
     }
     
     return videosToReturn

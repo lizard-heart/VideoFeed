@@ -14,6 +14,9 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.channelID, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
+    
+    @State var showAddPlaylist = false
+    @State var showAddChannel = false
 
     var body: some View {
         NavigationView {
@@ -43,18 +46,42 @@ struct ContentView: View {
                         .onDelete(perform: deleteItems)
                     }
                 }
+
                 .toolbar {
+                    
                     ToolbarItem(placement: .navigationBarTrailing) {
                         EditButton()
                     }
                     ToolbarItem {
-                        NavigationLink(destination: NewChannelView()) {
-                            Label("Add Item", systemImage: "plus")
+                        Button(action: {
+                            self.showAddChannel = true
+                        }) {
+                            Label("Add Channel", systemImage: "plus")
                         }
+//                        NavigationLink(destination: NewChannelView()) {
+//                            Label("Add Item", systemImage: "plus")
+//                        }
                     }
+//                    ToolbarItem{
+//                        NavigationLink(destination: AddPlaylist()) {
+//                            Label("Add Playlist", systemImage: "text.badge.plus")
+//                        }
+//                    }
                 }
 
             }
+            .navigationBarItems(trailing: Button(action: {
+                self.showAddPlaylist = true
+            }) {
+                Label("Add Playlist", systemImage: "text.badge.plus")
+            })
+            .sheet(isPresented: $showAddChannel, content: {
+                                    NewChannelView()
+                                })
+            .sheet(isPresented: $showAddPlaylist, content: {
+                                AddPlaylist()
+                            })
+            
         }
     }
 

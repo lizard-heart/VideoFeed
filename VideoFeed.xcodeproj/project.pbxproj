@@ -22,6 +22,7 @@
 		BA7204E528E239B300D4AD35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E428E239B300D4AD35 /* Constants.swift */; };
 		BA7204E728E239C900D4AD35 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E628E239C900D4AD35 /* APIKey.swift */; };
 		BA7204E928E239F900D4AD35 /* YoutubeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7204E828E239F900D4AD35 /* YoutubeModel.swift */; };
+		BA78D2CB2A415C480024A848 /* AddPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA78D2CA2A415C480024A848 /* AddPlaylist.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		BA7204E428E239B300D4AD35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BA7204E628E239C900D4AD35 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		BA7204E828E239F900D4AD35 /* YoutubeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeModel.swift; sourceTree = "<group>"; };
+		BA78D2CA2A415C480024A848 /* AddPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaylist.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				BA7204CE28E2389900D4AD35 /* ContentView.swift */,
-				BA7204E028E2396500D4AD35 /* NewChannelView.swift */,
 				BA0D68F928E26620000879E2 /* VideoFeed.swift */,
 				BA0D68FD28E296DB000879E2 /* VideoPlayer.swift */,
+				BA7204E028E2396500D4AD35 /* NewChannelView.swift */,
+				BA78D2CA2A415C480024A848 /* AddPlaylist.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				BA7204E528E239B300D4AD35 /* Constants.swift in Sources */,
 				BA0D68FE28E296DB000879E2 /* VideoPlayer.swift in Sources */,
 				BA0D68FA28E26620000879E2 /* VideoFeed.swift in Sources */,
+				BA78D2CB2A415C480024A848 /* AddPlaylist.swift in Sources */,
 				BA7204CD28E2389900D4AD35 /* VideoFeedApp.swift in Sources */,
 				BA7204E128E2396500D4AD35 /* NewChannelView.swift in Sources */,
 			);
@@ -342,7 +346,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -376,7 +380,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
