@@ -34,6 +34,7 @@ struct NewChannelView: View {
                     }
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                         .padding()
+
             VStack {
                 Text("Add Channel")
                     .padding()

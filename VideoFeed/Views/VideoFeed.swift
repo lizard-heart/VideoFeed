@@ -29,7 +29,7 @@ struct VideoFeed: View {
             ForEach(generateVideoList(isPlaylist: isPlaylist, ID: channelID, watchedVideos: watchedVideos, subscribedFeeds: subscribedFeeds)) { video in
                 VStack(alignment: .leading) {
                     NavigationLink {
-                        VideoPlayer(videoID: video.id, videoTitle: video.videoTitle, videoDescription: video.description)
+                        VideoPlayerTest(videoID: video.id, videoTitle: video.videoTitle, videoDescription: video.description)
                     } label: {
                         Text(video.videoTitle)
                     }

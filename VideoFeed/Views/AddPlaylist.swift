@@ -9,9 +9,19 @@ import SwiftUI
 
 struct AddPlaylist: View {
     @Environment(\.dismiss) var dismiss
+    @State private var playlistName: String = ""
 //    var presentationMode: Binding<PresentationMode>
     var body: some View {
         ZStack {
+            
+            Button(action: {
+                dismiss()
+            }) {
+                  Text("Done")
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topTrailing)
+                .padding()
+            
             Button {
                 dismiss()
             } label: {
@@ -19,8 +29,9 @@ struct AddPlaylist: View {
                     .font(.largeTitle)
                     .foregroundColor(.gray)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            .padding()
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
+                .padding()
+            
             VStack {
                 Text("Hello world")
                     .padding()
@@ -28,8 +39,19 @@ struct AddPlaylist: View {
                     .font(.title)
                     .foregroundColor(Color.red)
                 
+                HStack {
+                    Text("Name")
+                        .fontWeight(.bold)
+                    TextField("New Feed", text: $playlistName)
+                        .multilineTextAlignment(.trailing)
+                }
+                
+                HStack {
+                    
+                } 
+                
                 Spacer()
-            }
+            }.padding(20)
         }
     }
 }

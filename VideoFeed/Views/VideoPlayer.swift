@@ -15,35 +15,79 @@ struct VideoPlayer: View {
     var videoTitle: String
     var videoDescription: String
     var body: some View {
-        VStack {
-            Text(videoTitle)
-                .fontWeight(.bold)
-                .font(.title)
-                .foregroundColor(Color.red)
-            
-            Spacer()
-            
+        GeometryReader {geometry in
             VStack {
-                let webViewModel = WebViewModel(url: Constants.YT_EMBED_URL + videoID)
-                WebViewContainer(webViewModel: webViewModel)
-            }
-            .frame(width:UIScreen.main.bounds.width, height: 9/16*UIScreen.main.bounds.width)
-            .onAppear(perform: {
-                let watchedVideo = WatchedVideos(context: viewContext)
-                watchedVideo.videoID = videoID
+                Text(videoTitle)
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .foregroundColor(Color.red)
                 
-                do {
-                    try viewContext.save()
-                } catch {
-                    let nsError = error as NSError
-                    fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                Spacer()
+                
+                VStack {
+                    let webViewModel = WebViewModel(url: Constants.YT_EMBED_URL + videoID)
+                    WebViewContainer(webViewModel: webViewModel)
                 }
-                print(videoID)
-            })
-            
-            Text(videoDescription)
-            
-            Spacer()
+                .frame(width:geometry.size.width, height: 9/16*geometry.size.width)
+                .onAppear(perform: {
+                    let watchedVideo = WatchedVideos(context: viewContext)
+                    watchedVideo.videoID = videoID
+                    
+                    do {
+                        try viewContext.save()
+                    } catch {
+                        let nsError = error as NSError
+                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+                    }
+                    print(videoID)
+                })
+                
+                Text(videoDescription)
+                
+                Spacer()
+            }
+        }
+    }
+}
+
+struct VideoPlayerTest: View {
+    @Environment(\.managedObjectContext) private var viewContext
+    var videoID: String
+    var videoTitle: String
+    var videoDescription: String
+    var body: some View {
+        GeometryReader {geometry in
+            VStack {
+                Text(videoTitle)
+                    .fontWeight(.bold)
+                    .font(.title)
+                    .foregroundColor(Color.red)
+                
+                Spacer()
+                
+                VStack {
+                    let webViewModel = WebViewModel(url: Constants.YT_EMBED_URL + videoID)
+                    WebViewContainer(webViewModel: webViewModel)
+                }
+                .frame(width:geometry.size.width, height: 9/16*geometry.size.width)
+                .onAppear(perform: {
+                    print("ll")
+//                    let watchedVideo = WatchedVideos(context: viewContext)
+//                    watchedVideo.videoID = videoID
+                    
+//                    do {
+//                        try viewContext.save()
+//                    } catch {
+//                        let nsError = error as NSError
+//                        fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+//                    }
+//                    print(videoID)
+                })
+                
+                Text(videoDescription)
+                
+                Spacer()
+            }
         }
     }
 }
